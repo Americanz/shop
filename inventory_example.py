@@ -160,6 +160,17 @@ def inventory_open(hashMap, _files=None, _data=None):
                                 "width": "match_parent",
                                 "weight": "3",
                                 "Elements": [
+                                      {
+                                        "type": "TextView",
+                                        "show_by_condition": "",
+                                        "Value": "@index",
+                                        "height": "wrap_content",
+                                        "width": "match_parent",
+                                        "TextSize": "16",
+                                        "weight": "1",
+                                        "TextBold": True,
+                                        "gravity_horizontal": "left",
+                                    },
                                     {
                                         "type": "TextView",
                                         "show_by_condition": "",
@@ -244,6 +255,7 @@ def inventory_open(hashMap, _files=None, _data=None):
 
     for line in document["goods"]:
         l = {
+            "index": document["goods"].index(line),
             "sku": line.get("nom"),
             "barcode": line.get("barcode"),
             "qty": line.get("qty_plan"),
@@ -318,7 +330,7 @@ def inventory_input(hashMap, _files=None, _data=None):
         )
 
     elif hashMap.get("event") == "onResultPositive":
-        hashMap.put("toast", str(pos))
+        hashMap.put("toast", "Заповнено фактичне значення " + str(pos))
         if pos > -1:
             document["goods"][pos]["qty"] = hashMap.get("qty")
             db["inventory"].insert(document, upsert=True)
