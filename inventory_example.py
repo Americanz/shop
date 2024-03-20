@@ -109,7 +109,7 @@ def inventory_list_open(hashMap, _files=None, _data=None):
             "key": doc.get("_id"),
             "string1": doc.get("name"),
             "string2": doc.get("warehouse"),
-            "string3": doc.get("1C"),
+            "string3": doc.get("shopName"),
         }
 
         jdocs["customcards"]["cardsdata"].append(card)
