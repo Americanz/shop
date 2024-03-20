@@ -285,14 +285,14 @@ def inventory_input(hashMap, _files=None, _data=None):
             "width": "match_parent",
             "orientation": "vertical",
             "Elements": [
-                {
-                    "type": "TextView",
-                    "height": "wrap_content",
-                    "width": "match_parent",
-                    "weight": "0",
-                    "Value": "Количество",
-                    "Variable": "",
-                },
+                # {
+                #     "type": "TextView",
+                #     "height": "wrap_content",
+                #     "width": "match_parent",
+                #     "weight": "0",
+                #     "Value": "Количество",
+                #     "Variable": "",
+                # },
                 {
                     "type": "EditTextText",
                     "height": "wrap_content",
