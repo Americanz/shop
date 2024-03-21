@@ -248,7 +248,16 @@ def inventory_open(hashMap, _files=None, _data=None):
                                         "weight": "1",
                                         "TextBold": True,
                                         "gravity_horizontal": "left",
-                                    },
+                                    }
+                                ],
+                            },
+                            {
+                                "type": "LinearLayout",
+                                "orientation": "vertical",
+                                "height": "wrap_content",
+                                "width": "match_parent",
+                                "weight": "3",
+                                "Elements": [
                                     {
                                         "type": "TextView",
                                         "show_by_condition": "",
