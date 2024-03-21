@@ -342,7 +342,7 @@ def inventory_open(hashMap, _files=None, _data=None):
 
     for line in document["goods"]:
         l = {
-            "index": document["goods"].index(line)+1,
+            "index": document["goods"].index(line) + 1,
             "sku": line.get("nom"),
             "barcode": line.get("barcode"),
             "qty": line.get("qty_plan"),
@@ -361,6 +361,7 @@ pos = -1
 def inventory_input(hashMap, _files=None, _data=None):
     global document
     global pos
+    global name
 
     # hashMap.put("toast",hashMap.get("listener"))
 
@@ -368,7 +369,8 @@ def inventory_input(hashMap, _files=None, _data=None):
 
         for line in document["goods"]:
             if line["barcode"] == hashMap.get("barcode"):
-                pos = document["goods"].index(line)+1
+                pos = document["goods"].index(line) + 1
+                name = line.get("nom")
                 break
 
         if pos == -1:
@@ -407,7 +409,7 @@ def inventory_input(hashMap, _files=None, _data=None):
         }
 
         hashMap.put("ShowDialogLayout", json.dumps(layout, ensure_ascii=False))
-        hashMap.put("ShowDialog", "")
+        hashMap.put("ShowDialog", name)
         hashMap.put(
             "ShowDialogStyle",
             json.dumps(
@@ -417,7 +419,7 @@ def inventory_input(hashMap, _files=None, _data=None):
         )
 
     elif hashMap.get("event") == "onResultPositive":
-        hashMap.put("toast", "Фактичне: " + str(pos))
+        hashMap.put("toast", "Рядок: " + str(pos))
         if pos > -1:
             document["goods"][pos]["qty"] = hashMap.get("qty")
             db["inventory"].insert(document, upsert=True)
