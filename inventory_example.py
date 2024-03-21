@@ -244,6 +244,7 @@ def inventory_open(hashMap, _files=None, _data=None):
                                         "Value": "@index",
                                         "height": "wrap_content",
                                         "width": "match_parent",
+                                        "margin": "0,15,0,0",
                                         "TextSize": "16",
                                         "weight": "1",
                                         "TextBold": True,
@@ -362,7 +363,6 @@ def inventory_input(hashMap, _files=None, _data=None):
     global document
     global pos, name, qty_plan
 
-
     # hashMap.put("toast",hashMap.get("listener"))
 
     if hashMap.get("listener") == "barcode":
@@ -422,7 +422,7 @@ def inventory_input(hashMap, _files=None, _data=None):
     elif hashMap.get("event") == "onResultPositive":
         hashMap.put("toast", "Рядок: " + str(pos))
         if pos > -1:
-            document["goods"][pos-1]["qty"] = hashMap.get("qty")
+            document["goods"][pos - 1]["qty"] = hashMap.get("qty")
             db["inventory"].insert(document, upsert=True)
 
     return hashMap
