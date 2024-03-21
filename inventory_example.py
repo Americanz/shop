@@ -5,6 +5,94 @@ from ru.travelfood.simple_ui import SimpleUtilites as suClass
 jdocs = {
     "customcards": {
         "options": {"search_enabled": True, "save_position": True},
+        # "layout": {
+        #     "type": "LinearLayout",
+        #     "orientation": "vertical",
+        #     "height": "match_parent",
+        #     "width": "match_parent",
+        #     "weight": "0",
+        #     "Elements": [
+        #         {
+        #             "type": "LinearLayout",
+        #             "orientation": "horizontal",
+        #             "height": "wrap_content",
+        #             "width": "match_parent",
+        #             "weight": "0",
+        #             "Elements": [
+        #                 {
+        #                     "type": "LinearLayout",
+        #                     "orientation": "vertical",
+        #                     "height": "wrap_content",
+        #                     "width": "match_parent",
+        #                     "weight": "1",
+        #                     "Elements": [
+        #                         {
+        #                             "type": "TextView",
+        #                             "show_by_condition": "",
+        #                             "Value": "@string1",
+        #                             "NoRefresh": False,
+        #                             "document_type": "",
+        #                             "mask": "",
+        #                             "Variable": "",
+        #                         },
+        #                         {
+        #                             "type": "TextView",
+        #                             "show_by_condition": "",
+        #                             "Value": "@string2",
+        #                             "NoRefresh": False,
+        #                             "document_type": "",
+        #                             "mask": "",
+        #                             "Variable": "",
+        #                         },
+        #                         {
+        #                             "type": "TextView",
+        #                             "show_by_condition": "",
+        #                             "Value": "@string3",
+        #                             "NoRefresh": False,
+        #                             "document_type": "",
+        #                             "mask": "",
+        #                             "Variable": "",
+        #                         },
+        #                     ],
+        #                 },
+        #                 {
+        #                     "type": "TextView",
+        #                     "show_by_condition": "",
+        #                     "Value": "@val",
+        #                     "NoRefresh": False,
+        #                     "document_type": "",
+        #                     "mask": "",
+        #                     "Variable": "",
+        #                     "TextSize": "16",
+        #                     "TextColor": "#DB7093",
+        #                     "TextBold": True,
+        #                     "TextItalic": False,
+        #                     "BackgroundColor": "",
+        #                     "width": "match_parent",
+        #                     "height": "wrap_content",
+        #                     "weight": 2,
+        #                 },
+        #             ],
+        #         },
+        #         {
+        #             "type": "TextView",
+        #             "show_by_condition": "",
+        #             "Value": "@descr",
+        #             "NoRefresh": False,
+        #             "document_type": "",
+        #             "mask": "",
+        #             "Variable": "",
+        #             "TextSize": "-1",
+        #             "TextColor": "#6F9393",
+        #             "TextBold": False,
+        #             "TextItalic": True,
+        #             "BackgroundColor": "",
+        #             "width": "wrap_content",
+        #             "height": "wrap_content",
+        #             "weight": 0,
+        #         },
+        #     ],
+        # },
         "layout": {
             "type": "LinearLayout",
             "orientation": "vertical",
@@ -15,7 +103,7 @@ jdocs = {
                 {
                     "type": "LinearLayout",
                     "orientation": "horizontal",
-                    "height": "wrap_content",
+                    "height": "match_parent",
                     "width": "match_parent",
                     "weight": "0",
                     "Elements": [
@@ -28,69 +116,59 @@ jdocs = {
                             "Elements": [
                                 {
                                     "type": "TextView",
+                                    "TextBold": True,
                                     "show_by_condition": "",
-                                    "Value": "@string1",
+                                    "Value": "@name",
                                     "NoRefresh": False,
                                     "document_type": "",
                                     "mask": "",
                                     "Variable": "",
+                                    "TextSize": 20,
                                 },
                                 {
                                     "type": "TextView",
                                     "show_by_condition": "",
-                                    "Value": "@string2",
+                                    "Value": "@code",
                                     "NoRefresh": False,
                                     "document_type": "",
                                     "mask": "",
                                     "Variable": "",
+                                    "TextSize": 20,
                                 },
                                 {
                                     "type": "TextView",
                                     "show_by_condition": "",
-                                    "Value": "@string3",
+                                    "Value": "@GTIN",
                                     "NoRefresh": False,
                                     "document_type": "",
                                     "mask": "",
                                     "Variable": "",
+                                    "TextSize": 20,
+                                },
+                                {
+                                    "type": "TextView",
+                                    "show_by_condition": "",
+                                    "Value": "@type_name",
+                                    "NoRefresh": False,
+                                    "document_type": "",
+                                    "mask": "",
+                                    "Variable": "",
+                                    "TextSize": 20,
+                                },
+                                {
+                                    "type": "TextView",
+                                    "show_by_condition": "",
+                                    "Value": "@unit_name",
+                                    "NoRefresh": False,
+                                    "document_type": "",
+                                    "mask": "",
+                                    "Variable": "",
+                                    "TextSize": 20,
                                 },
                             ],
-                        },
-                        {
-                            "type": "TextView",
-                            "show_by_condition": "",
-                            "Value": "@val",
-                            "NoRefresh": False,
-                            "document_type": "",
-                            "mask": "",
-                            "Variable": "",
-                            "TextSize": "16",
-                            "TextColor": "#DB7093",
-                            "TextBold": True,
-                            "TextItalic": False,
-                            "BackgroundColor": "",
-                            "width": "match_parent",
-                            "height": "wrap_content",
-                            "weight": 2,
-                        },
+                        }
                     ],
-                },
-                {
-                    "type": "TextView",
-                    "show_by_condition": "",
-                    "Value": "@descr",
-                    "NoRefresh": False,
-                    "document_type": "",
-                    "mask": "",
-                    "Variable": "",
-                    "TextSize": "-1",
-                    "TextColor": "#6F9393",
-                    "TextBold": False,
-                    "TextItalic": True,
-                    "BackgroundColor": "",
-                    "width": "wrap_content",
-                    "height": "wrap_content",
-                    "weight": 0,
-                },
+                }
             ],
         },
     }
@@ -107,9 +185,9 @@ def inventory_list_open(hashMap, _files=None, _data=None):
     for doc in documents:
         card = {
             "key": doc.get("_id"),
-            "string1": doc.get("name"),
-            "string2": doc.get("warehouse"),
-            "string3": doc.get("shopName"),
+            "name": doc.get("name"),
+            "code": doc.get("warehouse"),
+            "GTIN": doc.get("shopName"),
         }
 
         jdocs["customcards"]["cardsdata"].append(card)
@@ -160,7 +238,7 @@ def inventory_open(hashMap, _files=None, _data=None):
                                 "width": "match_parent",
                                 "weight": "3",
                                 "Elements": [
-                                      {
+                                    {
                                         "type": "TextView",
                                         "show_by_condition": "",
                                         "Value": "@index",
@@ -297,14 +375,14 @@ def inventory_input(hashMap, _files=None, _data=None):
             "width": "match_parent",
             "orientation": "vertical",
             "Elements": [
-                # {
-                #     "type": "TextView",
-                #     "height": "wrap_content",
-                #     "width": "match_parent",
-                #     "weight": "0",
-                #     "Value": "Количество",
-                #     "Variable": "",
-                # },
+                {
+                    "type": "TextView",
+                    "height": "wrap_content",
+                    "width": "match_parent",
+                    "weight": "0",
+                    "Value": "@qty_plan",
+                    "Variable": "",
+                },
                 {
                     "type": "EditTextText",
                     "height": "wrap_content",
@@ -330,7 +408,7 @@ def inventory_input(hashMap, _files=None, _data=None):
         )
 
     elif hashMap.get("event") == "onResultPositive":
-        hashMap.put("toast", "Заповнено фактичне значення " + str(pos))
+        hashMap.put("toast", "Фактичне: " + str(pos))
         if pos > -1:
             document["goods"][pos]["qty"] = hashMap.get("qty")
             db["inventory"].insert(document, upsert=True)
