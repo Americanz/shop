@@ -360,8 +360,8 @@ pos = -1
 
 def inventory_input(hashMap, _files=None, _data=None):
     global document
-    global pos
-    global name
+    global pos, name, qty_plan
+
 
     # hashMap.put("toast",hashMap.get("listener"))
 
@@ -371,6 +371,7 @@ def inventory_input(hashMap, _files=None, _data=None):
             if line["barcode"] == hashMap.get("barcode"):
                 pos = document["goods"].index(line) + 1
                 name = line.get("nom")
+                qty_plan = line.get("qty_plan")
                 break
 
         if pos == -1:
@@ -391,7 +392,7 @@ def inventory_input(hashMap, _files=None, _data=None):
                     "height": "wrap_content",
                     "width": "match_parent",
                     "weight": "0",
-                    "Value": "name: " + name,
+                    "Value": "" + name + "\n По плану:" + qty_plan ,
                     "Variable": "",
                 },
                 {
