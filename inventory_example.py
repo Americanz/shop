@@ -422,7 +422,7 @@ def inventory_input(hashMap, _files=None, _data=None):
     elif hashMap.get("event") == "onResultPositive":
         hashMap.put("toast", "Рядок: " + str(pos))
         if pos > -1:
-            document["goods"][pos]["qty"] = hashMap.get("qty")
+            document["goods"][pos-1]["qty"] = hashMap.get("qty")
             db["inventory"].insert(document, upsert=True)
 
     return hashMap
