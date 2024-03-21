@@ -391,7 +391,7 @@ def inventory_input(hashMap, _files=None, _data=None):
                     "height": "wrap_content",
                     "width": "match_parent",
                     "weight": "0",
-                    "Value": "@qty_plan",
+                    "Value": name,
                     "Variable": "",
                 },
                 {
@@ -409,7 +409,7 @@ def inventory_input(hashMap, _files=None, _data=None):
         }
 
         hashMap.put("ShowDialogLayout", json.dumps(layout, ensure_ascii=False))
-        hashMap.put("ShowDialog", name)
+        hashMap.put("ShowDialog", "")
         hashMap.put(
             "ShowDialogStyle",
             json.dumps(
