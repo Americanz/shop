@@ -392,7 +392,7 @@ def inventory_input(hashMap, _files=None, _data=None):
                     "height": "wrap_content",
                     "width": "match_parent",
                     "weight": "0",
-                    "Value": "" + name + "\n По плану:" + qty_plan ,
+                    "Value": "По плану: " + qty_plan,
                     "Variable": "",
                 },
                 {
@@ -414,7 +414,7 @@ def inventory_input(hashMap, _files=None, _data=None):
         hashMap.put(
             "ShowDialogStyle",
             json.dumps(
-                {"title": "Ввод количества", "yes": "Сохранить", "no": "Отмена"},
+                {"title": "" + name, "yes": "Сохранить", "no": "Отмена"},
                 ensure_ascii=False,
             ),
         )
