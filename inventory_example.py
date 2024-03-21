@@ -392,7 +392,7 @@ def inventory_input(hashMap, _files=None, _data=None):
                     "height": "wrap_content",
                     "width": "match_parent",
                     "weight": "0",
-                    "Value": "По плану: " + qty_plan,
+                    "Value": "По плану: " + str(qty_plan),
                     "Variable": "",
                 },
                 {
