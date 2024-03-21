@@ -236,6 +236,7 @@ def inventory_open(hashMap, _files=None, _data=None):
                                 "orientation": "vertical",
                                 "height": "wrap_content",
                                 "width": "match_parent",
+                                "weight": "1",
                                 "Elements": [
                                     {
                                         "type": "TextView",
