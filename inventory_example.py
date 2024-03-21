@@ -391,7 +391,7 @@ def inventory_input(hashMap, _files=None, _data=None):
                     "height": "wrap_content",
                     "width": "match_parent",
                     "weight": "0",
-                    "Value": name,
+                    "Value": "name: " + name,
                     "Variable": "",
                 },
                 {
