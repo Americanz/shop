@@ -342,7 +342,7 @@ def inventory_open(hashMap, _files=None, _data=None):
 
     for line in document["goods"]:
         l = {
-            "index": document["goods"].index(line),
+            "index": document["goods"].index(line)+1,
             "sku": line.get("nom"),
             "barcode": line.get("barcode"),
             "qty": line.get("qty_plan"),
@@ -368,7 +368,7 @@ def inventory_input(hashMap, _files=None, _data=None):
 
         for line in document["goods"]:
             if line["barcode"] == hashMap.get("barcode"):
-                pos = document["goods"].index(line)
+                pos = document["goods"].index(line)+1
                 break
 
         if pos == -1:
