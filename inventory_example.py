@@ -123,7 +123,7 @@ jdocs = {
                                     "document_type": "",
                                     "mask": "",
                                     "Variable": "",
-                                    "TextSize": 20,
+                                    "TextSize": 16,
                                 },
                                 {
                                     "type": "TextView",
@@ -133,7 +133,7 @@ jdocs = {
                                     "document_type": "",
                                     "mask": "",
                                     "Variable": "",
-                                    "TextSize": 20,
+                                    "TextSize": 16,
                                 },
                                 {
                                     "type": "TextView",
@@ -143,7 +143,7 @@ jdocs = {
                                     "document_type": "",
                                     "mask": "",
                                     "Variable": "",
-                                    "TextSize": 20,
+                                    "TextSize": 16,
                                 },
                                 {
                                     "type": "TextView",
@@ -275,7 +275,7 @@ def inventory_open(hashMap, _files=None, _data=None):
                             },
                             {
                                 "type": "LinearLayout",
-                                "orientation": "horizontal",
+                                "orientation": "vertical",
                                 "height": "wrap_content",
                                 "width": "match_parent",
                                 "weight": "1",
